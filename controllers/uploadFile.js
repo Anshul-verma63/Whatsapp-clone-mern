@@ -7,7 +7,7 @@ export const uploadFile = async (req, res) => {
 
     const newFile = await new fileModel({ path: path, name: name }).save();
 
-    const imageUrl = `http://localhost:8500/api/v1/user/file/${newFile._id}`;
+    const imageUrl = `https://whatsapp-clone-mern-backend.onrender.com/api/v1/user/file/${newFile._id}`;
     return res.status(200).json({ imageUrl, name });
   } catch (error) {
     return res.status({
